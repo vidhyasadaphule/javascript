@@ -1,0 +1,34 @@
+<script>
+    'use strict';
+    var product = {
+        proname:"Men Striped Polo Neck",
+        price:259,
+        brandname:'BLIVE',
+        path:"https://rukminim1.flixcart.com/image/612/612/xif0q/t-shirt/h/u/u/xxl-bnvwtrbpolo-pl6-blive-original-imaggcgfnhpyzhwb.jpeg?q=70"
+    }
+    console.log(product);
+
+    console.log(product.brandname);
+    console.log(product.price);
+    console.log(product['price']);
+
+
+    document.write(`
+        <div>
+            <img src='${product.path}' />
+            <h2>${product.price}</h2>
+            <p>${product.proname}</p>
+            <p>${product.brandname}</p>    
+        </div>
+    `);
+</script>
+<style>
+    div{
+        width: 250px;
+        border:solid;
+        text-align: center;
+    }
+    div img{
+        width: 100%;
+    }
+</style>

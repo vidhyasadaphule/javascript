@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<body>
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum aliquam magnam ipsa eum quasi officia asperiores iusto quos modi fugiat. Laborum ipsa sed temporibus eius ullam in sint autem quis!
+    </p>
+    <button onclick="ajaxfunc()">click</button>
+    <div class="container">
+        <div class="row" id="abc">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium ipsa quos voluptatum rem assumenda iure labore earum nemo culpa, natus perferendis expedita minus dolor inventore reprehenderit beatae magnam molestias dolorum?
+        </div>
+    </div>
+    
+    <script>
+        function ajaxfunc(){
+            var xhr = new XMLHttpRequest();
+            console.log(typeof xhr);
+            
+            console.log(xhr.readyState);
+            console.log(xhr.status);
+            
+            document.getElementById('abc').innerHTML='';
+            
+            xhr.onreadystatechange = function(){
+                console.log("onreadystatechange phase here");
+                console.log(xhr.readyState,xhr.status);
+                if(xhr.readyState==4 && xhr.status==200){
+                   console.log(xhr.responseText);
+                   var ans = JSON.parse(xhr.responseText);
+                   console.log(ans);
+
+                    ans.forEach(element => {
+                    console.log(element);
+                    var division = document.createElement('div');
+                    division.className = "col-xl-4 ";
+
+                    var pic = document.createElement('img');
+                    pic.src = element.image;
+                    pic.className = "img-fluid";
+
+                    var h2 = document.createElement('h2');
+                    h2.innerHTML = element.price;
+
+                    var p = document.createElement('p');
+                    p.innerHTML = element.title;
+
+                    division.append(pic);
+                    division.append(h2);
+                    division.append(p);
+
+                    document.getElementById('abc').append(division);
+                });
+                
+                }
+                else if(xhr.readyState == 4 && xhr.status==404){
+                    console.log("404 not found something went wrong");
+
+                }
+
+                }
+                xhr.open('GET',"https://fakestoreapi.com/products",true);
+                xhr.send();
+            }
+
+
+           
+
+        
+    </script>
+    
+</body>
+</html>

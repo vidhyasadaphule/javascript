@@ -1,0 +1,15 @@
+<script>
+ function myfunc(){
+     var a=10;
+     var b=20;
+     var c=a+b;
+     return ()=>{
+         console.log('func called');
+     };
+ }
+
+ var ans = myfunc();
+ //console.log(typeof ans);
+
+ ans();
+</script>

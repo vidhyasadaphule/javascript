@@ -1,0 +1,38 @@
+<script>
+
+    var userinfo = {
+        name:"Akshay",
+        age:20,
+        place:"Mumbai",
+        hobbies:['swimming','singing']
+    }
+
+    console.log(typeof userinfo);
+    console.log(userinfo);
+
+    //convert object into string
+
+    var userInfo_String = JSON.stringify(userinfo);
+    console.log(userInfo_String);
+
+
+    var productInfo = '{"name":"Tshirt","price":1000,"Size":["XL","XXL"]}';
+    console.log(typeof productInfo);
+    console.log(productInfo);
+
+    var productInfo_Object = JSON.parse(productInfo);
+    console.log(productInfo_Object);
+
+    var personinfo ={
+        name: "vidhya",
+        age: 25,
+        place : "navi mumbai",
+        hobbies:["singing","writing"]
+    }
+
+    var dummy = JSON.stringify(personinfo);
+    console.log(dummy);
+    
+    var numm = JSON.parse(dummy);
+    console.log(numm);
+</script>

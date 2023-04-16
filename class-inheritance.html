@@ -1,0 +1,36 @@
+<script>
+    class Mobile{
+
+       sound(){
+           console.log('sound');
+       }
+       call(){
+           console.log('call');
+       }
+       display(){
+           console.log('display');
+       }
+       camera(){
+           console.log('10mp camera');
+       }
+
+    }
+    //whenever same method is written in both parent and child class the method of parent class is overriden
+
+    class Smartphone extends Mobile{ //inheriting the parent class mobile
+        camera(){
+            console.log(this.x);
+            super.camera();
+            super.display();  //super keyword is used to access the overriden method of parent class. 
+            console.log('80mp');
+        }
+    }
+
+    var rec= new Smartphone();
+    console.log(rec);
+
+    rec.sound();
+    rec.call();
+    //rec.display();
+    rec.camera();
+</script>

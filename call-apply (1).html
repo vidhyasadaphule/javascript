@@ -1,0 +1,39 @@
+<script>
+    var user1 = {
+        name:"Akshay",dob:'20/3/2000'
+    }
+    var user2 = {
+        name :"Akshya shah", place:"mumbai",dob:'20/3/2023'
+    }
+
+    var info={
+        age:function(role,hobby){
+            console.log(this);
+            var ans=this.dob.split("/");
+            console.log(ans);
+
+            var[date,month,year] = this.dob.split("/");
+            console.log(year);
+
+            var record = new Date();
+            console.log(record);
+            console.log(record.getFullYear()-year,role,hobby);
+        },
+        showname:function(){
+            console.log('func called');
+            console.log(this);
+            console.log(this.name);
+        }
+    }
+    // info.showname();
+    info.showname.call(user1);
+    info.age.call(user1,"developer","swimming");
+    info.age.call(user2,"designer","reading");
+
+    // when you want to use fnction of something else and object of something else then use call and apply
+
+
+    info.age.apply(user1,["developer","swimming"]);
+    info.age.apply(user2,["designer","reading"]);
+
+</script>

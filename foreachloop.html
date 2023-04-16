@@ -1,0 +1,49 @@
+<!--
+    Date : 9/3/2023
+    Auth : Vidhya Sadaphule
+    Subject: FOR EACH ,FOR IN LOOP
+    Description:
+            FOR EACH loop
+            1.The forEach loop iterates over the each element of array .
+
+            FOR IN LOOP
+            1.the for in loop is used  to iterate over an object or array .
+
+            FOR OF LOOP
+            1. for of loop is used to iterate over any iterable object(array,objects,maps and sets)
+
+    Last updated by:
+    Last modified by: 
+-->
+<script>
+    var arr = [1,2,3,4,5,6];
+    
+    arr.forEach(element=>{
+                console.log(element);
+
+    });
+
+    // for in loop
+
+    var person = {
+                    name:"vidhya",
+                    age:"24",
+                    location:"airoli"
+                 }
+
+    for (const key in person) {
+
+        console.log(key);
+        console.log(person[key]);
+    }
+   
+
+   //for of loop
+
+    var fruits = ["apple","banana","pineaple","mango"];
+    for (const iterator of fruits) {
+        console.log(iterator);
+    }
+
+    
+</script>

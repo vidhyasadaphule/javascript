@@ -1,0 +1,67 @@
+<!-- 
+    Date : 6/3/2023
+    Auth : Vidhya Sadaphule
+    Subject : LET,VAR & CONST   
+    Description :   
+        
+        LET,VAR & CONST 
+
+		VAR:
+        1.using var keyword variable can be redeclared.
+        2.using var keyword hoisting is supported in javascript.
+		3.using var keyword the variable can be accessed out of scope all this cannot be done with using let keyword.
+
+		LET:
+		1.let keyword can not be redeclared and cannot be reassigned the value
+    Github : 
+        last updated : 
+        last updated By : 
+-->
+<script>
+	//use of let and var keyword 
+
+	/*
+	
+	
+	
+	
+	*/
+
+	let x; //using let keyword
+	x = 10;
+	console.log(x);
+
+	var y; // declare using var keyword 
+	y = 11;
+
+	console.log(y);
+	y = 15;// reassign using the varkeyword
+	console.log(y);
+
+	/*hoisting in javascript
+	JavaScript Hoisting refers to the process whereby the interpreter appears to move the declaration of functions,
+	 variables or classes to the top of their scope, prior to execution of the code.
+	*/
+	a=100;
+	console.log(a);
+	var a;
+
+	//hoisting only works with var keyword and does not work with assignment of value
+
+	console.log(b);
+    var b;
+
+    /*accessing out of scope
+	only using var keyword the variables can be accessed out of the scope .
+	*/
+    
+	{
+		var m=42;
+		console.log('inside the scope');
+		let n=62;
+	}
+	console.log(m);
+	console.log('outside the scope');
+	console.log(n);
+
+</script>

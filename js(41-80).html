@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+<style>
+    
+</style>
+<body>
+    
+<!-- 41) create a textbox (with id txt) & get value.if the value is string then show error in paragraph as only number is required.  -->
+<input type="text" id="txt" onclick="showerror(this)" class="m-3">
+<p id="para1"></p>
+<br>
+
+<!-- 42) create a textbox (with id txt). create a paragraph (having id para ). onclick event get value from textbox and display it within paragraph ( hint: you may use innerText or innerHTML , get the diff. between innerText,innerHTML) -->
+<input type="text" class="m-3" id="txt1" onclick="getinpara(this)">
+<p id="para2"></p>
+<br>
+
+<!-- 43) create a textbox (with id txt). create a paragraph (having id para ).onclick event get only number from textbox & display square of the no which you have entered ( hint: use Math library ) -->
+<input type="text" id="txt3" class="m-3" onclick="displaysquare(this)" >
+<p id="para3"></p>
+<br>
+
+
+<!--50) create an array with any three value . on button click add value 10 within an array (i.e at the end ) -->
+<button class="btn btn-dark" onclick="addinarray()">add 10</button>
+<br>
+<br>
+
+<!-- 51) create an array with any three value . on button click add value 20 within an array (i.e at start position ) -->
+<button class="btn btn-dark" onclick="addinstart()">add20</button>
+<br>
+<br>
+<!-- 52) create an array with any five value . on button click remove last value -->
+<button class="btn btn-dark" onclick="removelast()">removelast</button>
+<br><br>
+<!-- 53) create an array with any five value . on button click remove first value -->
+<button class="btn btn-dark" onclick="removefirst()">removefirst</button>
+<br>
+
+<!-- 55) create a text box , get value from the same. do the validation for mobile number & show result in paragraph ( below textbox) -->
+<input type="text" class="m-3" id="txt4" ondblclick="validatemobileno()" placeholder="enter mobile number">
+<p id="para4"></p>
+<br>
+<br>
+<!-- 56) create a text box , get value from the same. do the validation for emailid  & show result in paragraph ( below textbox) -->
+<input type="text" id="emailid" ondblclick="emailvalidation()" placeholder="enter email">
+<p id="para5"></p>
+<br>
+<br>
+<!-- 57) create a text box , get value from the same. do the validation for name  & show result in paragraph ( below textbox) -->
+<input type="text" id="name" ondblclick="namevalidation()" placeholder="enter name">
+<p id="para6"></p>
+<br>
+<br>
+
+<!-- // 61) generate an example to show the difference between parseInt() & Number() function (Hint: take any value as an input) -->
+<input type="text" placeholder="enter anything " id="txt5" class="mt-3">
+<p id="p4"></p>
+<button onclick="intcheck()">submit string</button>
+<br>
+<br>
+
+<!-- 65) on button click apply background color to body tag
+<button onclick="document.querySelector("body").style.backgroundColor = "red";">chng background</button> -->
+
+<!-- 66) on mousemove event get x coordinate & y coordinate , and show the result in paragraph. -->
+<div style="height:300px;width:100%;border:solid black 2px;" onmousemove="showcoordinates(event);"> </div>
+<h3 id="dumby"></h3>
+<br>
+<br>
+
+<!-- 67) create a textbox, enter dummy content and use onkeyup event to show 2 result:
+	a) data in capital case ( in paragraph having id para1)
+	b) data in small case ( in paragraph having id para2) -->
+
+<input type="text" onkeyup="changecase()" id="txtb">
+<p id="para11"></p>
+<p id="para12"></p>
+<br>
+<br>
+
+<!-- 68) create a paragraph , on mouseover apply background color (grey) & onmouseout apply background color (lightgrey) -->
+<p id="chngbg" onmouseover=>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad cum sequi deserunt laborum nostrum earum totam cumque voluptatem obcaecati iste!</p>
+
+
+
+<script src="js(41-80).js"></script>    
+</body>
+</html>

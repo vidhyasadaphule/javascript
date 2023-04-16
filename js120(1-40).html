@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js120.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <style>
+
+    </style>
+</head>
+<body id="b1" onresize="Myfunc()" >
+    <div class="container m-5">   
+    <!-- 1) create a text box , get value from the same. do the validation for mobile number & show result in paragraph ( below textbox) -->
+  
+    <input type="text" placeholder="enter your mobile number" id="txt1" class="">
+    <p id="p1"></p>
+    <button onclick="myfunc()"> submit</button>
+    <br> 
+    
+    <!-- 2) create a text box , get value from the same. do the validation for emailid  & show result in paragraph ( below textbox) -->
+    <input type="text" id="txt2" placeholder="enter your email" class="mt-3">
+    <p id="p2"></p>
+    <button onclick="emailvalidate()">submit email</button>  
+    <br>
+    
+    <!-- 3) create a text box , get value from the same. do the validation for name  & show result in paragraph ( below textbox) -->
+    <input type="text" placeholder="enter name" class="form-controls mt-3" id="txt3">
+    <p id="p3"></p>
+    <button onclick="namevalidate()">submit name</button>
+    <br>
+
+    <!--  4) generate an array with value [10,20,30,40,50,60,70] and do the sum using reduce() function of javascript --nahi samajra -->
+    <!-- 7) generate an example to show the difference between parseInt() & Number() function (Hint: take any value as an input)
+
+    // The parseInt() method parses up to the first non-digit and returns the parsed value.  
+    // Number() converts the string into a number, which can also be a float BTW.
+     -->
+     <input type="text" placeholder="enter anything " id="txt4" class="mt-3">
+     <p id="p4"></p>
+     <button onclick="intcheck()">submit string</button>
+     <br>
+     <!-- 11) on button click apply background color to body tag -->
+
+     <button onclick="changebackground()" class="mt-3">change background</button>
+
+     <!-- 12) on mousemove event get x coordinate & y coordinate , and show the result in paragraph. -->
+     <div onmouseover="showCoords(event)" class="mt-3" style="border:1px solid black;padding:4px;width:100%;height: 300px;" >
+        <p id="demo">Coordinates:</p>
+     </div>
+     <br>
+     <!-- 13) create a textbox, enter dummy content and use onkeyup event to show 2 result:
+	a) data in capital case ( in paragraph having id para1)
+	b) data in small case ( in paragraph having id para2) -->
+
+    <input type="text" placeholder="enter anything" id="dummy" class="mt-3" onkeyup="myFunction()">
+    <p id="para1"></p>
+    <p id="para2"></p>
+    <br>
+    <!-- 14) create a paragraph , on mouseover apply background color (grey) & onmouseout apply background color (lightgrey) 
+    -->
+    <p id="p5" onmouseover="changegrey()" onmouseout="changelightgrey()" class="mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque eius veniam harum cumque iure nam asperiores dignissimos totam ducimus quo commodi deleniti eos, ab inventore sed explicabo, tenetur voluptatem in.</p>
+   
+    <br>
+     
+    <!-- 15) generate a function name calculate (Note: here you must have anonymous function instead of regular function ).
+    print dummy text in console.
+
+    a) call the same function using onblur event ( here use textbox )
+    b) call the same function using onfocus event ( here use textbox ) -->
+    <input type="text" placeholder="enter anything" id="txt5" class="mt-3" onblur="Calculate()" onfocus="Calculate()">
+    <br>
+    <!-- 26) create a function ( name myfunc() ) and call the same function on button click ( hint : within function print test data using console) -->
+     
+    <button onclick="myfunc()" class="mt-3">test</button>
+     <br>
+    <!-- 27) create a function ( name myfunc() ) and call the same function using keyup event using textbox ( hint : within function print test data using console) -->
+    
+    <input type="text" placeholder="enter in this" id="txt6" class="mt-3" onkeyup="myFunc()">
+    <br>
+    <!-- 29) create a function ( name myfunc() ) and pass 2 value having number 10 & 20 , do the multiplication & show the result in console  ( hint: use button & onclick event) -->
+    <button onclick="MyFunc(10,20)" class="mt-3">click</button>
+    <br>
+   
+    <!-- // 30) create a paragraph with some dummy content , on button click change the paragraph value ( hint : use innerHTML & querySelector() functionality)  -->
+
+    <p id="p6" class="mt-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi iste laborum dolorem? Eos minima ipsa magnam animi omnis aliquid ex, explicabo excepturi soluta voluptas dolore temporibus ullam commodi libero quia.</p>
+
+    <button class="mt-3" onclick="changepara()">change content</button>
+    <br>
+    <!-- 31) create a paragraph with some dummy content , on button double click change the paragraph background color to grey ( hint : use style & getElementById() functionality)  -->
+
+     <button type="button" class="mt-2" ondblclick="changebg()" > change bg</button>
+     <p id="p7">dummy text 3</p>
+     <br>
+
+     <!-- 32) create a paragraph with some dummy content , on mouse over change the paragraph content ( hint:  no hint in this case ) -->
+
+     <p id="p8" onmouseover="this.innerHTML = 'changed this content'">just another dummy content</p>
+
+     <!-- 33) create a paragraph with some dummy content , on hover apply grey color & on mouse out apply blue color -->
+
+    <p id="p9" onmouseover="this.style.backgroundColor='grey'" onmouseout="this.className='bg-primary'">vidhya is here!</p>
+
+    <!-- 34) show 1 to 5 number on browser with break using for loop -->
+    <p id="p10"></p>
+
+    <!-- 37) create a textbox (with id txt) & get any value from text box using button & show result in console ( hint: use onclick event & value property for textbox ) -->
+     <input type="text" id="txt">
+     <button onclick="catchcontent()">catch content</button>
+     <br>
+
+    <!-- 38) generate 2 textbox (having id txt1,txt2 respectively) , get values of both in data1 & data2. now show the sum of values in paragraph having id para ( note : if you recieve data from textbox then please check data type before you do the sum) -->
+
+     <input type="text" id="txt1">
+     <input type="text" id="txt2">
+     <button type="button" onclick="dumby()">summing btn</button>
+     <p id="para">dummy text here</p>
+
+    <!-- 39) create a textbox (with id txt) & get value from textbox & check whether the entered value is string or number (hint: use isNaN() & if-else). show the result in console -->
+    <input type="text"  onclick="numberorstring(this)" id="txt3">
+     <br>
+    <!-- 40) create a textbox (with id txt) & get value from textbox , in case textbox is empty then please show textbox border with color red & border width 2px. -->
+    <input type="text" id="txt4" onclick="boxempty(this)" class="mt-3">
+
+
+    </div>  
+</body>
+</html>

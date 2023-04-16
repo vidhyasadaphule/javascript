@@ -1,0 +1,44 @@
+<!--
+    Date : 13/3/2023
+    Auth : Vidhya Sadaphule
+    Subject: FOR OF VS FOR IN
+    Description:
+          FOR IN
+
+         1.the difference between for in and for of is for in iterates over the properties of objects 
+          but for of iterates over the values of object.
+        2.for does not iterate over an object it only iterates over an array.
+
+        #for in iterates over an object
+        #for of iterates over an array,maps,set
+
+    Last updated by:
+    Last modified by: 
+-->
+
+<script>
+    var person = {
+        name:"vidhya",
+        age:25,
+        loaction:"airoli",
+
+    }
+
+    var arr1 =[4,5,6]
+
+    for (const key in person) {
+       console.log(key);
+    }
+
+    // for (const iterator of person) {
+    //     console.log(iterator);
+    // }
+
+    for (const key in arr1) {
+       console.log(key);
+    }
+
+    for (const iterator of arr1) {
+        console.log(iterator);
+    }
+</script>

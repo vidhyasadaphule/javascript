@@ -1,0 +1,37 @@
+<script>
+	/*
+	function is declared with function keyword in js
+	and with arguments and without arguments functions can be used
+	*/
+	
+	function myfunction()
+	{
+		console.log('this is just a statement');
+		var a=12;
+		var b=13;
+		console.log(a+b);
+	}
+	myfunction();
+
+
+	function withparameters(x,y)
+	{
+		
+		console.log(x+y);
+	}
+	withparameters("jonita","divine");
+	withparameters(40,40);
+	document.write(`<h2>this is function ${withparameters("rinky","vidhya")}</h2>`);//wrote out of function so not accessed 
+
+	//a function for discount
+
+	function discount(amt,disc)
+	{
+		discamt=amt-(disc*amt/100);
+		document.write(`this is the discout ${discamt}`);
+	}
+    discount(1000,10);
+     
+
+
+</script>

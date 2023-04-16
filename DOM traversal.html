@@ -1,0 +1,41 @@
+<!--
+    Date : 8/3/2023
+    Auth : Vidhya Sadaphule
+    Subject: DOM TRAVERSAL
+    Description:
+            DOM TRAVERSAL:
+             1.dom traversal is used when we want to traverse  child, parent , siblings in the document.
+
+
+    Last updated by:
+    Last modified by: 
+-->
+<body>
+    <ul id="parent">
+        <li>list 1</li>
+        <li id="sib">list 2</li>
+        <li>list 3</li>
+        <li>list 4</li>
+    </ul>
+    <script>
+        //for traversing the parentelemnt
+        var par = document.getElementById('parent');
+        console.log(par);
+        var parent = par.parentElement;
+        console.log(parent);
+        //for traversing the firstchild element
+        var first = par.firstElementChild;
+        console.log(first);
+        //for traversing the all the childrens
+        var children = par.children;
+        console.log(children);
+        //for traversing previous element sibling
+        var sibling = document.getElementById("sib");
+        console.log(sibling);
+        var prevsib = sibling.previousElementSibling;
+        console.log(prevsib);
+
+
+
+    </script>
+</body>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     div{
+        height:500px;
+        width:500px;
+        background-color: red;
+     }
+     .demo{
+      background-color: blue;
+      height: 300px;
+      width:300px;
+     }
+    </style>
+</head>
+<body>
+   <p id="a1"> dumb</p>
+   <div id="x1">this is a div one</div>
+
+   
+
+</body>
+<script>
+    //dom elements getelementbyid 
+    document.getElementById('a1').innerHTML="hello world";
+    document.getElementById('a1').text="hello world";
+    //getElementById is an DOM method and .innerHTML is a property of the method
+    //innerhtml is useful for replacing or putting  a content in html document
+     
+    //document.createElement creates an element in html document
+    
+    document.body.onload = addElement;
+    function addElement(){
+       for (let i=1;i<5;i++){
+       var nayadiv = document.createElement("div");
+       var nayacontent = document.createTextNode("naya div hai" + i);
+
+       nayadiv.appendChild(nayacontent);
+       
+       const currentDiv = document.getElementById("x1");
+        document.body.insertBefore(nayadiv, currentDiv);   
+    }
+    }
+
+    //addElement();
+
+  /*  //document.body.onload = addElement;
+
+function addElement() {
+  // create a new div element
+  const newDiv = document.createElement("div");
+
+  // and give it some content
+  const newContent = document.createTextNode("Hi there and greetings!");
+
+  // add the text node to the newly created div
+  newDiv.appendChild(newContent);
+
+  // add the newly created element and its content into the DOM
+  const currentDiv = document.getElementById("x1");
+  document.body.insertBefore(newDiv, currentDiv);
+}
+*/
+
+//dom methods getelementbyid to access the content of a particular element
+console.log(document.getElementById('x1'));
+console.log(document.getElementById('x1').innerHTML);
+document.write(document.getElementById('x1').innerHTML);
+
+//when you want to put content in a particular element use get elementby id in this way
+document.getElementById('x1').innerHTML= 'this is changed content';
+document.getElementById('a1').innerHTML = 'this is changed content of a1';
+
+//to change the style of an element
+document.getElementById('x1').style.border = 'solid black 3px';
+document.getElementById('a1').style.border = 'solid yellow 3px';
+
+// to remove an element using id 
+//document.getElementById('a1').remove();
+
+//to apply another class to an html element
+document.getElementById('a1').className = 'div-change';
+document.getElementById('a1').setAttribute('class', 'demo');
+//
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline js/externaljs/comments</title>
+    <script> document.write("JS in inline");</script>
+    <script> document.write("<br>JS in <b> second </b> inline");</script>
+    <br>
+    <script src="myscript.js"></script>
+    
+    
+</head>
+
+<body>
+    <h2>inline javascript</h2>
+
+     <script>//this is single line comment
+        document.write("JS in body!<br>");</script>
+    
+    <script>/*document.write("js comment")*/;</script>
+
+    <script>    
+         var  firstname="vidhya";
+              //document.write("my firstanme is =",firstname);
+              firstname="sadaphule";
+              document.write("my firstanme is =",firstname);
+              document.write("<br>");
+            
+              //multiple var names declaration
+              var lastname,age;
+                  lastname="tanisha";
+                  age=23;
+              document.write("MY FULLNAME IS ",lastname,age);
+    </script>
+     
+</body>
+
+</html>

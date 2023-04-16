@@ -1,0 +1,33 @@
+<script>
+    var brands = ['nike','adidas','puma','zara'];
+
+    //for of is used to access values from array
+
+    for (val of brands){
+        console.log(val);//it prints values from start of an array to the end
+    }
+
+    for(i in brands){
+        console.log(i,brands[i]);//only prints index of an array  and can used to access an object also
+    }
+
+    var product = {
+        name:"Tshirt",
+        price:1000,
+        discount:20
+    }
+
+    console.log(product);
+
+    /*
+     for of loop is only valid for an array it cannot be used for objects 
+     for(value of product){
+
+     }
+
+    */
+     for(i in product){
+         console.log(i, product[i]);
+     }
+
+</script>

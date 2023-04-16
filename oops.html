@@ -1,0 +1,171 @@
+<!--
+    Date : 9/3/2023
+    Auth : Vidhya Sadaphule
+    Subject: OOPS CONCEPTS
+    Description:
+            OOPS Concepts
+            1.class keyword is used to declare class.
+            2.extends keyword is used when you want to inherit the parent class to the child class.
+            3.to access the members of a class in the methods used this keyword.
+            4.to access the methods of parent class in child class use super keyword.
+            5.if both parent and child class have the same method the parent class method is overriden.c
+            6.to declare a member/property as a private  property use # with the property declarartion.
+    Last updated by:
+    Last modified by: 
+-->
+
+<script>
+    class Family{
+        a = "beer";
+        b = "spirits"; 
+        c = "gin";
+
+        father(){
+            console.log('this is the first member'+" "+this.a);
+        }
+
+    }
+
+    class Family_tree extends Family{
+        x = "premix";
+
+        children(){
+            super.father();//to access functions of parent class in the child class super keyword is used.
+            console.log(this.c);//when you want to access members of parent and child class then this keyword is used
+            console.log(this.x);
+        }
+    }
+
+    let obj = new Family_tree();
+    obj.children();
+
+    // inheritance using constructor and parameters
+
+    class person{
+
+        constructor(name,age,location){
+            this.name = name;
+            this.age = age;
+            this.location = location;
+        }
+        thisisname(){
+             console.log(this.name);
+        }
+        thisisage(){
+            return this.age;
+        }
+        thisislocation(){
+            return this.location;
+        }
+    }
+    class passion extends person{
+        constructor(name,age,location){
+          super(name,age,location);
+        }
+        thispassion(){
+            return super.thisisname();
+        }
+
+    }
+    let p = new passion("user",25,"airoli");
+    p.thispassion();
+
+    
+
+    ///
+
+    class liquorkart{
+        m = "spirits";
+        n = "rum";
+        p = "whisky";
+
+        lk (){
+            console.log('lk method of parennt class');
+        }
+        lk2(){
+            console.log('lk 2 method of parent class');
+        }
+    }
+
+    class liquorkart2 extends liquorkart{
+        lk(){
+            super.lk();//super keyword is   
+            console.log('first method of liquarkart 2 class');
+            console.log(this.n);
+        }
+
+    }
+
+    let liq = new liquorkart2();
+    liq.lk();
+
+   //private-property
+
+   class User{
+        name = "vidhya";
+        email="v@v.com";
+        //private property or member
+        #password = "1234";
+
+    }
+    var rec = new User();
+    console.log(rec);
+    console.log(rec.name);
+    console.log(rec.email);
+    console.log(rec.password);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+   
+</script>

@@ -1,0 +1,21 @@
+<script>
+//higher order function --myfunc
+function myfunc(){
+    var a=10;
+    var b=20;
+    var c=a+b;
+
+    //first class function
+    //closure
+    //closure is a function inside a higher order function
+    return ()=>{
+        //console.log('func called');
+        return c;
+    }
+}
+
+var ans = myfunc();
+//console.log(typeof ans);
+var value= ans();
+console.log(value);
+</script>

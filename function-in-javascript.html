@@ -1,0 +1,44 @@
+<script>
+    //named function ---which is given name
+
+    function add(){
+        var a=10;
+        var b=20;
+        console.log(a+b);
+    }
+    add();
+
+    //anonymous function or unnamed function---function without name
+
+    var myvar = function(){
+        var a = 20;
+        var b = 30;
+        console.log(a+b);
+    }
+    myvar();
+    //console.log(typeof myvar);
+
+    //whenever we store a function in a varaiable it is called first class function
+    //myvar1();
+
+    var myvar1 = ()=>{
+        var a=200;
+        var b=300;
+        console.log(a+b);
+    }
+    //console.log(typeof myvar1)
+
+    //arrow function in depth
+    //arrow function is used when we want to print something of just one line
+
+    var myvar2 = (a,b)=>console.log(a+b);
+    myvar2(21,31);
+
+    var myvar3 =a=>console.log(a**2)
+    myvar3(10);
+
+    // hoisting is not supported by unnamed and anonymous function
+
+    
+
+</script>

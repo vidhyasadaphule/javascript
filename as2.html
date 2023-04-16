@@ -1,0 +1,98 @@
+<script>
+    //1) create a custom function having name calculate() and pass 2 parameter (e.g: 10,20 ) within function & do the multiplication process.
+
+    //show the result in console. (Hint: use pass by value)
+
+    function calculate(a, b) {
+        var a;
+        var b;
+        var res = a * b;
+        console.log(res);
+    }
+
+    calculate(10, 20);
+
+    //2) how to create an array using ( new Array() functionality ) in javascript?
+    //please write down sample code with some value in array
+
+    //new array functionality creates an array without using array [] bracket literal,you can pass an number as an argument its creates anarray with 
+    //elements and number of arugment passed .
+    var brands = new Array('vidhya', 'tanisha');
+    console.log(brands);
+    console.log(brands.length);
+
+    var cars = new Array(2);
+    console.log(cars.length);
+
+    //3) create an object ( custom object  ) in javascript with key (name,age,location ) with any value . show the result in console
+    var details = { name: 'vidhya', age: '24', location: 'airoli' };
+    console.log(details);
+
+    //4) Create a variable called userName, assign the value "Ajay" to it. and check your answer in console
+    var userName = 'ajay';
+    console.log(userName);
+
+    /*5)  Create a variable called x, assign the value 10
+    
+        Create a variable called y, assign the value 20
+    
+    Create a variable called sum, assign the sum of x&y
+    
+    and check your answer in console*/
+
+    var x = 10;
+    var y = 20;
+    var sum = x + y;
+    console.log(sum);
+
+    /*6) Display the sum of 15 + 20, using two variables: x and y
+    
+        & show value in alert box*/
+
+    function add() {
+        let x = 15;
+        let y = 20;
+        let sum = x + y;
+        alert(sum);
+    }
+    add();
+
+    /*7) get any value from prompt box and show the same value in console using log function*/
+    let person = prompt('enter your name', '');
+    console.log(person);
+
+    /* 8) Create a variable called answer, assign data1 * data2 to it, and display the result on browser using write() function
+        here: data1 will have value 100 & data2 will have value 200*/
+    var data1 = 100;
+    var data2 = 200;
+    var answer = data1 * data2;
+
+    document.write(answer);
+/* 
+ 9) create a variable data1 & data2 having value ajay & vijay respectively. add data1 & data2 using math ( + ) operator & understand the concept of concatenation operator 
+ */
+  let deb = 'ajay';
+  let deb2 = 'vijay';
+  console.log(deb + ' '+deb2);
+
+  //10) create a variable data1 , store 10.90 in data1. and check the data type of data1 in console
+
+  var data1 = 10.90;
+  console.log(typeof(data1));
+
+// 11) create two variable having values 10 & 20. & show the multiplication value in alert box
+
+var m = 10;
+var n = 20;
+var ans = m*n;
+alert(ans);
+
+//12) create two variable having values 10 & 20. & show the division answer on browser using write() method
+
+var p = 10;
+var q = 20;
+var s = p/q;
+
+document.write("\n" +  s);
+
+</script>

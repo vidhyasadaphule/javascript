@@ -1,0 +1,42 @@
+<script>
+	/*
+	 array is declared when multiple values of same data type is needed to be declared
+	*/
+	var brands = ['nikes', 'zara', 'jordan'];
+	console.log(brands);
+
+	/* to print on the page use interpolation
+
+	INTERPOLATION:
+	String interpolation is a great programming language feature that allows injecting variables, function calls, arithmetic expressions directly into a string.
+	
+	interpolation means insertion of something of different nature into something of diffrent nature*/
+
+	document.write(`<h2>this is first element ${brands[0]} </h2> `);
+	document.write(`<h2>this is second element ${brands[1]} </h2> `);
+
+
+	/*spread operator 
+	 when you want to club multiple arrays together then use spread operator ...
+	*/
+
+	var shoes = ['nike', 'jordan'];
+	var app = ['bgmi', 'cod'];
+	var merge = [...shoes, ...app];
+	console.log(merge);
+	document.write(merge);
+	document.write(`<p>this is shoes array ${shoes}</p>`);
+	document.write(`<h1>this is app ${app[0]}</h1>`);
+	document.write(`this is merged array ${merge}`);
+
+	/* objects in javascript
+	objects in js are collection of multiple data of different data types
+	*/
+
+	var products = { pic: 'https://www.flipkart.com/try-color-block-men-round-neck-black-grey-t-shirt/p/itm8cff5d7dc8343?pid=TSHG9RJFKD7SSZQG&lid=LSTTSHG9RJFKD7SSZQGY6FZNR&marketplace=FLIPKART&store=clo%2Fash%2Fank%2Fedy&srno=b_1_1&otracker=browse&iid=en_TW6O6jpqyk%2B0u0REgn%2BGY6VCs68ozx%2B40mLVaROqgZ%2FbAUQs5q%2FK2DPBygd9xcVzFcuqhrOt8kXtUGIKPrqPpg%3D%3D&ssid=88f7jg088g0000001673238085706',name:'t- shirt',price:'259',color:'red'};
+	document.write(`<h2>this is the name of products${products.name}</h2>`);
+	document.write(`<h3> this is the price of products  ${products.price}</h3>`);
+	document.write(`<h3> this is the price of color  ${products.color}</h3>`);
+	
+
+</script>

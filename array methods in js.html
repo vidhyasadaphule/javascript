@@ -1,0 +1,65 @@
+<!--
+    Date : 13/3/2023
+    Auth : Vidhya Sadaphule
+    Subject: ARRAY METHODS IN JS
+    Description:
+
+        ARRAY METHODS IN JS
+         
+
+    Last updated by:
+    Last modified by: 
+-->
+<script>
+    // 1.POP() METHOD
+    //1. removes last element of an array
+
+    var fruits =["apple","kiwi"];
+    fruits.pop("kiwi");
+    console.log(fruits);
+
+    // 2.PUSH () METHOD
+    // adds an element in an arrays
+
+    fruits.push("banana");
+    console.log(fruits);
+
+
+    // 3.SHIFT METHOD()
+    //    the shift method shifts the array elements to its lower index ,removes the first element of array .
+
+     var singer = ["king","badshah","honey singh"];
+     singer.shift();
+     console.log(singer);
+
+    //  4.UNSHIFT METHOD()
+    // adds an elemnt at the the start position of array.
+    singer.unshift("divine");
+    console.log(singer);
+
+
+    // 5.ARRAY LENGTH()
+    // array lenght method gives the length of an array
+
+    console.log(singer.length);
+    
+    
+    //6.SPLICE METHOD
+    //    this method is used to add or delete elements in array.
+    //    arr.splice(indexwhere new element added,how many elements to be added, "elments to be added" )
+
+
+    var arr =["vicky","vidhya","zhankana","pranali","sahil","ashish"];
+    arr.splice(2,1,"hemant");
+    console.log(arr);
+
+
+    //SLICE METHOD() - the slicemethod presents an new array and slices the array in different
+
+
+    var hobby = ["paint","sing","dance","write"];
+    var  newarr = hobby.slice(1);
+    console.log(newarr);
+
+
+</script>

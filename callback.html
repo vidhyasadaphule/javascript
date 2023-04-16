@@ -1,0 +1,23 @@
+<script>
+  function outer(a, b, cb) {
+    console.log(a + b);
+    console.log(typeof cb);
+    cb();
+  }//function is passed as an argument
+  //arrow function first class function
+
+  //arrow function -- callback - a callback function is a function passed into another function
+ //which is then invoked inside the outer function to complete some kind of routine or action.
+
+
+ //outer --->higher order function
+ outer(100,200 , ()=>{
+     console.log('function called');
+ }) 
+
+ //higher order function is a function which is invoked first when it is with a call back function.
+
+
+
+</script>
+

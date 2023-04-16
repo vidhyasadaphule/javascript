@@ -1,0 +1,54 @@
+<!--
+    Date : 8/3/2023
+    Auth : Vidhya Sadaphule
+    Subject: ANONYMOUS FUNCTIONS
+    Description:
+            ANONYMOUS FUNCTIONS:
+             1. A function with no name is called as an anonymous function .
+             2. It can be stored into a variable.when it is stored in a variable it is also called first class function. 
+             3.hoisting is not supported by anonymous function.
+
+             function (){
+                  block of code
+             }
+
+             using arrow function
+             (()=>{
+
+             })();
+
+             refer:https://www.geeksforgeeks.org/javascript-anonymous-functions/
+
+    Last updated by:
+    Last modified by: 
+-->
+<script>
+
+    // the function is stored in a variable  so it is also called an first class function.
+    var ans = function(){
+       console.log('function called here');
+    };
+    
+    ans();
+
+    //anonymous function with parameter
+
+    var res = function(x){
+        document.write(`<h2> this is second anonymous function called here! </h2>`,x);
+    };
+    res ("second");
+    
+    // self executing anonymous function
+    (()=>{
+              console.log("self executing function");
+    })();
+
+    (()=>{
+        console.log("ra");
+    })();
+
+
+
+    
+	
+</script>

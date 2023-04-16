@@ -1,0 +1,142 @@
+<script>
+'use strict';
+//javascript program for summ of all elements of array
+function sumarray(array){
+    var sum=0;
+
+    for (const item of array){
+        sum += item;
+
+    }
+    console.log(sum);
+}
+
+sumarray([100,20,-9,80]);
+
+//javascript program for multiplies of all elemnts of an array
+function multiplyarray(array){
+    var multiply=1;
+    for (const item of array){
+        multiply *= item;
+    }
+    console.log(multiply);
+}
+
+multiplyarray([10,20,30]);
+
+//javascript program for finding largest number and smallest number of an array
+var dumb=[32,1,-9,980];
+
+console.log(Math.max(...dumb));
+console.log(Math.min(...dumb));
+
+
+//program to remove duplicates from an array
+var chars = [50,10,30,10,20,30];
+
+let uniqueChars = [];
+chars.forEach((c) => {
+    if (!uniqueChars.includes(c)) {
+        uniqueChars.push(c);
+    }
+});
+
+console.log(uniqueChars);
+
+//second method
+//let fling = [50,10,30,10,20,30];
+let newunique = [...new Set(chars)];
+console.log(newunique);
+
+// program to check whether the array is empty or not
+
+if (chars.length==0){
+    console.log('array is empty');
+}
+else {
+console.log('array is not empty');
+}
+
+
+//case 2 for array is empty
+
+let flip=[];
+if(flip.length==0)
+{
+    console.log('array is empty');
+}
+else {
+    console.log('array is not empty');
+}
+
+// program to copy an array or clone an array
+
+let array1 = [10,20,30];
+let array2=[];
+array2.push(...array1);
+console.log(array2);
+
+//javascript program to get difference between two arrays 
+
+let arr1 = [10,20,30];
+let arr2 = [10,100,20];
+let difference = arr1.filter(x => !arr2.includes(x));
+console.log(difference);
+
+
+//pragram to access index of an array
+let arra = [10,20,30];
+for (let i = 0; i < arra.length; i++) {
+  console.log(i);
+}
+
+//program to append an array to another array
+let ar1=[10,20,30];
+let ar2=[100,200,300];
+
+let ar3=ar1.concat(ar2);
+console.log(ar3);
+
+//program for second smallest number in an array (Array is [50,10,30,10,20,30])
+
+var secondMax = function (){ 
+    var arri = [50,10,30,10,20,30]; // use int arrays
+    var max = Math.max.apply(null, arri); // get the max of the array
+    arri.splice(arri.indexOf(max), 1); // remove max from the array
+    return Math.max.apply(null, arri); // get the 2nd max
+};
+
+console.log(secondMax);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="parent">
+        <button>
+            <h2>Parent</h2>
+        </button>
+        <button id="child">
+  
+            <p>Child</p>
+  
+        </button>
+    </div><br>
+
+    
+
+
+    <script>
+        //array destructor/destructuring
+
+        // In general, destroying means to destroy or to reduce something to its small portions. By saying array destructuring javascript, we do not mean to destroy the array, but it means to break the array into simple fragments which can be used to assign a new variable. These fragments can be easily accessed and can be referenced by the variables. The destructuring of the array totally depends upon the coder and how much he wants to destroy or destruct the given array
+
+        var contestant = ["beer","carftbeer","gin","rum","spirits"];
+        console.log(contestant);
+        var [a,b,c,d,e] = contestant;
+        console.log(a);
+        console.log(b);
+        document.write(c);
+        
+        
+         
+        var [g,f] = [x = "beer",y = "craftbeer"];
+        console.log(g);
+        console.log(f);
+
+        ({ a, b} = { a: 5, b: 10 }); //obejct destructuring 
+        console.log(a); // 5
+        console.log(b); // 10
+        
+        let singers = ["harrystyles","weeknd"];
+        var [dum,pum]= singers;
+        console.log(dum);
+        console.log(pum);
+
+        var bands = ["black eyed peas","linkin park"];
+        var [jim,bim] = bands;
+        console.log(jim);
+        console.log(bim);
+
+        //event bubbling - Event bubbling is a method of event propagation in the HTML DOM API when an event is in an element inside another element, and both elements have registered a handle to that event. It is a process that starts with the element that triggered the event and then bubbles up to the containing elements in the hierarchy. In event bubbling, the event is first captured and handled by the innermost element and then propagated to outer elements.
+        
+        document.getElementById("child").addEventListener("click", function () {
+            alert("You clicked the Child element!");
+        }, false);
+          
+        document.getElementById("parent").addEventListener("click", function () {
+            alert("You clicked the parent element!");
+        }, false);
+
+
+        //event capturing -an event propagates from the outermost element to the target element
+
+
+        //eval function - The Javascript  eval() function is used to evaluate the expression. If the argument represents one or more JavaScript statements, eval() evaluates the statements. We do not call eval() to evaluate an arithmetic expression. JavaScript evaluates arithmetic expressions automatically.  evalshould not be used due to security   risks
+        
+
+
+        function func() {
+     
+     // Original string
+            var a = 2;
+            var b = 2;
+  
+     // Finding the sum
+             var value = eval(new String(a + b));
+             console.log(value);
+            }
+     // Driver Code
+            func();
+
+         //   
+
+    </script>
+    
+</body>
+</html>

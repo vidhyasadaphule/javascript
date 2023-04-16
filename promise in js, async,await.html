@@ -1,0 +1,59 @@
+<!--
+    Date : 13/3/2023
+    Auth : Vidhya Sadaphule
+    Subject: PROMISE IN JS
+    Description:
+
+        PROMISE IN JS
+        1.promise is a promise of code execution .The code either will be executed or it may fail to execute 
+        in both cases the user will be notified.
+        2.promise is needed for parallel execution.
+        3.states of promises are
+            1.pending
+            2.fulfilled
+            3.rejected
+
+        var promise = new Promise(function(resolve,reject){
+            
+        })
+
+    Last updated by:
+    Last modified by: 
+-->
+
+<script>
+    async function vidhya() {
+    let p1 = new Promise((resolve,reject)=>{
+         setTimeout(()=>{
+            resolve("27 deg");
+         },1000);
+
+    })
+
+
+    let p2 = new Promise((resolve,reject)=>{
+      setTimeout(()=>{
+        resolve("25 deg")
+      },2000);
+    })
+    // p1.then(alert);
+    // p2.then(alert);
+    console.log("please wait fetching 1");
+    let promise1 = await p1;
+    console.log(" fetched promise 1 :" + promise1);
+
+    console.log("please wait fetching 2")
+    let promise2 = await p2;
+    console.log(" fetched promise 2 :" + promise2);
+    return[promise1,promise2];
+
+    }
+    console.log("weather department");
+    let a = vidhya();
+    a.then((value)=>{
+        console.log(value);
+    })
+    a.catch((error)=>{
+        console.log(new Error("NOT FULFILLED"));
+    })
+</script>

@@ -1,0 +1,53 @@
+<!--
+    Date : 15/3/2023
+    Auth : Vidhya Sadaphule
+    Subject: CLOSURE
+    Description:
+        CLOSURE
+        A closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment). In other words, a closure gives you access to an outer function's scope from an inner function. 
+    Last updated by:
+    Last modified by: 
+-->
+<script>
+   
+function init(){
+    var message ="outer function variable";
+    function vidhya(){
+        console.log("this is the message:"+message);
+    }
+    message = "outer function reassignment ";
+   console.log(message);
+    return vidhya;
+
+}
+let a = init();
+a();
+
+// second example
+
+function returnfunc(){
+   const x = () =>{
+    let a = 1;
+    console.log(a);
+      const y = () =>{
+        let a = 99;
+        console.log(a);
+           const z = () =>{
+            const a = 999;
+            console.log(a);
+           }
+
+         z();
+      }
+      y()
+
+   }
+   return x
+
+}
+
+
+let m = returnfunc();
+ m();
+
+</script>

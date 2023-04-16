@@ -1,0 +1,74 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+<div class="container">
+    
+        <button>click</button>
+            <hr>
+            <ul>              
+            </ul>    
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <img src="" alt="">
+    </div>
+</div>
+<script>
+     document.querySelector('button').onclick = function(){
+    //     var ans = fetch('https://fakestoreapi.com/products/categories');
+    //     console.log(typeof ans);
+    //     console.log(ans);
+        
+    //     ans.then(res=>{
+    //        // console.log(res);
+    //         console.log(res.json());
+
+    //     })
+      
+    // here fetch generates an promise and res.json also gnertes a promise
+    // so for the purpose of geting data from the promise again then is used an forech is used to print the data from the array 
+        fetch('https://fakestoreapi.com/products/categories')
+        .then(res=>res.json())
+        .then(value=>{
+            console.log(value);
+
+            value.forEach(ans => {
+                var liTag = document.createElement('li');
+                liTag.innerHTML= ans;
+                
+                document.querySelector('ul').append(liTag);
+            
+            });
+        })
+    }
+
+
+    let x = fetch('https://fakestoreapi.com/products/categories');
+    x.then((value)=>{
+        return value.json();
+        //  console.log(a);
+    })
+    .then((element)=>{
+       console.log(element);
+    })
+
+    console.log(x);
+
+
+    //
+
+    let p1 = fetch('https://fakestoreapi.com/products?limit=5');
+
+    p1.then((para1)=>{
+       return para1.json();
+    }).then((para2)=>{
+        console.log(para2);
+
+        para2.forEach((iterator)=>{
+          console.log(iterator);
+        })
+        // for (const elem of para2 ) {
+        //     console.log(elem);
+        // }
+    })
+
+    // console.log(p1);
+</script>
